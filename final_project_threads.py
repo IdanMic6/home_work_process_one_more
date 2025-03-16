@@ -5,8 +5,7 @@ total_chars = 0
 
 def downloader(url, thread_id):
     global total_chars
-
-    response = requests.get(url).json()  # להוסיף טיפול בתגובה אם צריך
+    response = requests.get(url).json()  
     response_str = str(response)
     num_chars = len(response_str)
     total_chars += num_chars
